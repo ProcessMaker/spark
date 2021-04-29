@@ -132,7 +132,7 @@ ProcessMaker.EventBus.$on(
         params: {
           type: 'FORM',
           interactive: true
-        }        
+        }
       }
     });
 
@@ -353,10 +353,6 @@ ProcessMaker.EventBus.$on(
             name: 'taskAssignment',
             configurables: [],
             assignmentTypes: [
-              {
-                value: '',
-                label: ''
-              },
               {
                 value: '',
                 label: 'Anonymous'
