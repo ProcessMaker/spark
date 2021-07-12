@@ -731,6 +731,32 @@ nav {
   text-decoration: underline;
 }
 
+.form-group[required="required"] {
+  label::after,
+  legend::after {
+    content: "*";
+    display: inline-block;
+    font-size: 80%;
+    font-weight: 400;
+    margin-left: 2px;
+    opacity: .5;
+    vertical-align: top;
+  }
+}
+
+.custom-select,
+.custom-file-label {
+  border-color: $form-control-border-color;
+}
+
+.custom-file-label::after {
+  background-color: $secondary;
+  border-color: $secondary;
+  border-radius: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
 .sr-only {
   position:absolute;
   left:-10000px;

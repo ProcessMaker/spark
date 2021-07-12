@@ -9,11 +9,11 @@
     </div>
 
     <b-collapse is-nav id="nav-collapse">
-        <confirmation-modal class="d-none d-lg-block" id="confirmModal" v-if='confirmShow' :title="confirmTitle" :message="confirmMessage"
+        <confirmation-modal class="d-none d-lg-block" id="confirmModal" :show="confirmShow" :title="confirmTitle" :message="confirmMessage"
                             :variant="confirmVariant" :callback="confirmCallback"
                             @close="confirmShow=false">
         </confirmation-modal>
-        <session-modal id="sessionModal" v-show='sessionShow' :title="sessionTitle" :message="sessionMessage" :time="sessionTime" :warn-seconds="sessionWarnSeconds"
+        <session-modal id="sessionModal" :shown="sessionShow" :title="sessionTitle" :message="sessionMessage" :time="sessionTime" :warn-seconds="sessionWarnSeconds"
                 @close="sessionShow=false">
         </session-modal>
         <div v-if="alerts.length > 0" class="alert-wrapper">
